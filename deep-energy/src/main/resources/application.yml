@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: deep-energy
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+logging:
+  level:
+    org.springframework: INFO
+    com.energypredict: DEBUG
+server:
+  port: 8080

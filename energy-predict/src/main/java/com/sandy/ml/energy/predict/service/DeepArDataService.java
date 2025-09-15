@@ -246,7 +246,6 @@ public class DeepArDataService {
                 dynamicRealList.add(manager.create(dynReals));
             }
             if (config.isUseFeatDynamicCat() && data.getFeatDynamicCat() != null) {
-                List<NDArray> dynCat = new ArrayList<>();
                 int[][] dynCats= new int[data.getFeatDynamicCat().size()][data.getFeatDynamicCat().get(0).size()];
                 for (int i = 0; i < data.getFeatDynamicCat().size(); i++) {
                     List<Integer> dyn = data.getFeatDynamicCat().get(i);
